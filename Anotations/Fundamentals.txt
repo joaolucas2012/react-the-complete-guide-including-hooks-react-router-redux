@@ -1,0 +1,6 @@
+O QUE É REACT JS E PORQUE DEVERÍAMOS USAR ELE?
+
+--> É uma biblioteca do Javascript para construir interfaces de usuário para web.
+--> É como apps mobile e apps de desktop, tudo é muito "reativo", as coisas acontecem instantaneamente e eu não preciso esperar para carregar novas páginas ou ações para começar.
+--> Com o React, dá para escrever pouco código para as instruções e assim o React transforma esse código em Javascript.
+--> Em resumo, ele é menos complexo e extenso do que o Javascript, e trabalha com componentes.
