@@ -1,0 +1,64 @@
+EXPORTS E IMPORTS: Tem duas sintaxes, o default export e o named export.
+
+DEFAULT EXPORT: Exporta um valor padrão.
+--> Exemplos:
+import person from './person.js'
+import prs from './person.js'
+
+NAMED EXPORT: Exporta um valor nomeado com outro nome.
+--> Exemplos:
+import{smth} from './utility.js'
+import{smth as Smth} from './utility.js'
+import * as bundled from './utility.js'
+--> No último caso, isso serve para importar várias coisas ou arquivos ao mesmo tempo, por isso o uso do asterisco.
+
+//////////////////////////////////////////////////////////////////////////////////
+
+CLASSES: É uma abstração de algo, recebendo propriedades e métodos próprios.
+
+--> Sintaxe:
+class Person{
+  name = 'Max'
+  call = () =>{...}
+}
+
+--> Uma classe é instanciada com a palavra chave 'new'. Exemplo:
+const myPerson = new Person()
+myPerson.call()
+console.log(myPerson.name)
+
+--> Uma classe pode ter heranças de uma classe mais acima.
+
+PARA CONSTRUIR UMA SUPERCLASSE:
+class Human {
+  constructor() {
+    this.gender = "male";
+  }
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+PARA CONSTRUIR UMA SUB-CLASSE:
+class Person extends Human {
+  constructor() {
+    super();
+    this.name = "Max";
+    this.gender = "Female";
+  }
+  printMyName() {
+    console.log(this.name);
+  }
+}
+--> Aqui, é sempre necessário colocar 'extends' e depois o nome da super classe.
+--> É obrigatório colocar 'super()' no constructor, para a sub-classe herdar os métodos da super classe.
+
+PARA INSTANCIAR UM NOVO ELEMENTO PARA UMA CLASSE:
+const myPerson = new Person();
+--> Aqui, o myPerson foi criado como uma extensão da classe Person, e para isso foi necessário o 'new'.
+
+PARA USAR MÉTODOS DE UMA CLASSE:
+MyPerson.printMyName();
+MyPerson.printGender();
+
+//////////////////////////////////////////////////////////////////////////////////
