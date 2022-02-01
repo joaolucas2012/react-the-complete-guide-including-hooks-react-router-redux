@@ -62,3 +62,32 @@ MyPerson.printMyName();
 MyPerson.printGender();
 
 //////////////////////////////////////////////////////////////////////////////////
+
+CLASSES E MÉTODOS (ATUALIZADO PARA O ES6): 
+
+--> As sintaxe mais atualizada para usar para propriedades é:
+myProperty = 'value';
+
+--> A sintaxe mais atualizada para usar métodos é:
+myMethod = () ==> {...}
+
+--> Então, não é necessário usar um constructor e é sempre melhor usar arrow functions para os métodos, e não é necessário usar o super() para definir sub-classes.
+
+PARA CONSTRUIR UMA SUPERCLASSE:
+class Human {
+  gender = "male";
+  printGender = () => {
+    console.log(this.gender);
+  }
+}
+
+PARA CONSTRUIR UMA SUB-CLASSE:
+class Person extends Human {
+  name = "Max";
+  gender = "Female";
+  
+  printMyName = () => {
+    console.log(this.name);
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////
