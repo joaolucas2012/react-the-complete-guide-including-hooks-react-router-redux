@@ -91,3 +91,20 @@ class Person extends Human {
   }
 }
 //////////////////////////////////////////////////////////////////////////////////
+
+SPREAD E REST OPERATORS:
+
+SPREAD OPERATOR:
+--> É usado para dividir os valores de um array separadamente e armazená-los em um novo array, bem como adicionar novos elementos a ele.
+--> Também usado para fazer o mesmo com os objetos e as propriedades dele.
+--> Sintaxe:
+const newArray = [...oldArray, 1, 2];
+const newObject = {...oldObject, newProp: 5}
+
+REST OPERATOR:
+--> É usado para unir uma lista de diferentes valores dentro de um array.
+--> Também vale para objetos.
+--> Sintaxe:
+function sortArgs(...args){
+  return args.sort();
+}
