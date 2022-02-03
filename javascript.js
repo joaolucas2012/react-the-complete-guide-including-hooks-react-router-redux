@@ -27,6 +27,7 @@ person.printGender();
 */
 
 ///////////////////////////////////////////////////
+
 /*
 // REVIEW OF CLASSES AND METHODS
 class Human {
@@ -49,7 +50,9 @@ const person = new Person();
 person.printMyName();
 person.printGender();
 */
+
 ///////////////////////////////////////////////////
+
 /*
 // REVIEW OF SPREAD AND REST OPERATORS
 
@@ -74,4 +77,5 @@ const filter = (...args) => {
 };
 console.log(filter(1, 2, 3, 4));
 */
+
 ///////////////////////////////////////////////////
