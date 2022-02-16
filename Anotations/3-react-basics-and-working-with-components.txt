@@ -1,0 +1,12 @@
+COMO UM COMPONENTE É CONSTRUÍDO?
+--> Um componente é a combinação de HTML, CSS e Javascript.
+--> O React permite criar componentes reutilizáveis e reativos, que atualizam automaticamente;
+--> Não é preciso usar DOM, o React atualiza tudo dinamicamente com o uso de estados.
+
+---------------------------------------------------------------------------------------------------
+
+COMANDOS PARA CRIAR UMA APLICAÇÃO EM REACT:
+--> npx create-react-app nome-do-projeto ou npx create-react-app .
+--> cd nome-da-pasta-em-react
+--> npm start ou yarn start
+A aplicação irá abrir no localhost:3000.
