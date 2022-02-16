@@ -10,3 +10,16 @@ COMANDOS PARA CRIAR UMA APLICAÇÃO EM REACT:
 --> cd nome-da-pasta-em-react
 --> npm start ou yarn start
 A aplicação irá abrir no localhost:3000.
+
+---------------------------------------------------------------------------------------------------
+
+ANALISANDO UM PROJETO EM REACT PADRÃO:
+--> O arquivo src/index.js é o primeiro a ser executado assim que é carregada a página no localhost:3000.
+--> O package.json contém todas as depedências que precisam ser instaladas quando se executa o código npm install.
+--> Essas dependências são necessárias para fazer o projeto rodar.
+
+--> O scr/index.js renderiza o elemento com id 'root' do arquivo public/index.html.
+--> O App.js é uma função que é exportada e importada no index.js.
+
+---------------------------------------------------------------------------------------------------
+
