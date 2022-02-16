@@ -57,3 +57,9 @@ CÓDIGO PARA IMPORTAR UM COMPONENTE NO APP:
 import Nome from './components/Nome';
 
 ---------------------------------------------------------------------------------------------------
+
+ATALHO DE TECLADO DO VSCODE PARA FORMATAR TEXTO AUTOMATICAMENTE:
+--> Ir em Preferences -> Keyboard Shortcuts -> Format Document.
+--> O atalho é Shift Alt F.
+
+---------------------------------------------------------------------------------------------------
