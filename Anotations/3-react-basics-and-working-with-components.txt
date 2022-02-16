@@ -37,3 +37,23 @@ COMO REACT FUNCIONA:
 --> Isso é melhor para aplicações maiores.
 
 ---------------------------------------------------------------------------------------------------
+
+CONSTRUINDO O PRIMEIRO COMPONENTE CUSTOMIZADO:
+--> No React, cada componente é um arquivo novo, e por isso, no React, um projeto tem dezena de arquivos, pois também tem dezenas de componentes.
+
+PARA CRIAR UM COMPONENTE:
+--> Tem que criar uma pasta components dentro do src.
+--> Dentro dessa pasta vão ficar os componentes customizados.
+--> Cada componente é simplesmente uma função Javascript que retorna um HTML.
+--> O nome do componente tem que começar com letra maiúscula, pois o React reconhece nomes maiúsculos como sendo componentes customizados criados pelo desenvolvedor.
+
+CÓDIGO:
+function Nome() {
+return <>Alguma coisa</>
+}
+export default Nome;
+
+CÓDIGO PARA IMPORTAR UM COMPONENTE NO APP:
+import Nome from './components/Nome';
+
+---------------------------------------------------------------------------------------------------
