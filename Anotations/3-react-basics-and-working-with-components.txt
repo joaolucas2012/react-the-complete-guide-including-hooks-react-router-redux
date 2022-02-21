@@ -74,3 +74,19 @@ return <div>{expenseDate.toISOString()}</div>;
 
 ---------------------------------------------------------------------------------------------------
 
+COMO DEIXAR UM COMPONENTE REUTILIZÁVEL:
+--> É necessário criar no App() um vetor com vários objetos dentro, por exemplo, e com seus atributos. Isso tem que ser feito antes do return.
+--> Eu tenho que declarar no return do App() os componente customizados que serão retornados por html.
+
+--> Em cada componente eu devo declarar alguns atributos, como por exemplo:
+<Componente title={talcoisa}></Componente>
+
+--> Esses atributos precisam ter os mesmos nomes dos atributos dos ojetos dentro do vetor. 
+--> Depois eu entro nos componentes e coloco o "props" como parâmetro de sua função. 
+--> O "props" é um método passado como parâmetro da função de um componente.
+--> Esse método contém todas as keys (cada key é um atributo de um objeto dentro do vetor) e os valores (cada valor é o valor que um atributo do vetor tem).
+
+--> Para mostrar algo do App() no componente, é só digitar, por exemplo:
+<Nomedatag>{props.title}</Nomedatag>
+
+---------------------------------------------------------------------------------------------------
