@@ -103,3 +103,13 @@ COMO MOSTRAR SÓ O DIA DE UM OBJETO DATE:
 data.toLocaleString('en-US', {day: '2-digit'});
 
 ---------------------------------------------------------------------------------------------------
+
+SEPARANDO UM COMPONENTE EM MÚLTIPLOS COMPONENTES:
+--> Para isso é só pegar partes do código de um componente que são grandes e que ficariam melhores se fossem dispostas em componentes separados.
+--> Criar um componente novo para cada uma dessas partes individuais, e colar o código nesses componentes como return.
+--> Pegar o parâmetro props no componente criado, retornar o props.propriedade no html.
+--> Ir no componente de antes, importar o novo componente criado e depois retornar um html com esse novo componente.
+--> Passar nesse novo componente a propriedade que foi criada via props(antes de fechar a tag).
+--> Criar um componente.css para estilizar o componente recém-criado, e importar esse css no componente em si.
+
+---------------------------------------------------------------------------------------------------
