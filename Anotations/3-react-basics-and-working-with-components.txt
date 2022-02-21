@@ -90,3 +90,16 @@ COMO DEIXAR UM COMPONENTE REUTILIZÁVEL:
 <Nomedatag>{props.title}</Nomedatag>
 
 ---------------------------------------------------------------------------------------------------
+
+COMO MOSTRAR SÓ O MÊS DE UM OBJETO DATE:
+data.toLocaleString('en-US', {month: 'long'});
+--> toLocaleString() é um método que ajuda a mostrar uma data de um jeito mais legível.
+--> O primeiro parâmetro é uma língua, e o segundo define o que será mostrado.
+
+COMO MOSTRAR SÓ O ANO DE UM OBJETO DATE:
+data.getFullYear();
+
+COMO MOSTRAR SÓ O DIA DE UM OBJETO DATE:
+data.toLocaleString('en-US', {day: '2-digit'});
+
+---------------------------------------------------------------------------------------------------
