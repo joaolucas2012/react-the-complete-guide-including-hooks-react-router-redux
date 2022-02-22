@@ -39,7 +39,7 @@ COMO REACT FUNCIONA:
 ---------------------------------------------------------------------------------------------------
 
 CONSTRUINDO O PRIMEIRO COMPONENTE CUSTOMIZADO:
---> No React, cada componente é um arquivo novo, e por isso, no React, um projeto tem dezena de arquivos, pois também tem dezenas de componentes.
+--> No React, cada componente é um arquivo novo, e por isso, no React, um projeto tem dezenas de arquivos, pois também tem dezenas de componentes.
 
 PARA CRIAR UM COMPONENTE:
 --> Tem que criar uma pasta components dentro do src.
@@ -111,5 +111,35 @@ SEPARANDO UM COMPONENTE EM MÚLTIPLOS COMPONENTES:
 --> Ir no componente de antes, importar o novo componente criado e depois retornar um html com esse novo componente.
 --> Passar nesse novo componente a propriedade que foi criada via props(antes de fechar a tag).
 --> Criar um componente.css para estilizar o componente recém-criado, e importar esse css no componente em si.
+
+---------------------------------------------------------------------------------------------------
+
+O CONCEITO DE COMPOSIÇÃO: CHILDREN PROPS
+--> Composição é deixar a aplicação dividida ou composta por múltiplas partes que se completam.
+--> Dá pra criar um componente que só tenha um CSS nele, tipo um componente próprio que sirva pra conter o css de um card.
+--> Pra isso e só colocar "props" como parâmetro da função do novo componente Card, depois criar uma constante chamada 'classes', e dentro dela escrever 'card ' + props.className;
+--> Ao atribuir essa constante 'classes' como className da div, a div que for retornada irá pegar a classe 'card' e também a classe que estiver já sendo usada pelo conteúdo dentro do card, caso tenhas.
+--> Depois, no return, é pra retornar uma div com a className = {classes}, e dentro da div é pra deixar um {props.children}.
+--> O props.children representa tudo que estiver declarado dentro da tag componente Card, aonde quer que ele tenha sido declarado.
+
+--> No fim, fica assim:
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CARD.JS
+import './Card.css';
+
+function Card(props) {
+  const classes = 'card ' + props.className;
+  
+  return <div className={classes}>{props.children}</div>;
+}
+
+export default Card;
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CARD.CSS
+.card {
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 ---------------------------------------------------------------------------------------------------
