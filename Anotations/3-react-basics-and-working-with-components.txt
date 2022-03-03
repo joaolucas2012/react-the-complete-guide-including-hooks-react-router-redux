@@ -143,3 +143,8 @@ CARD.CSS
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 ---------------------------------------------------------------------------------------------------
+ORGANIZAÇÃO DE ARQUIVOS EM PASTAS:
+--> É uma boa prática organizar os diversos arquivos do projeto em pastas, na pasta components.
+--> Isso reduz a bagunça dos arquivos e torna a estrutura do projeto mais organizada.
+--> Pode-se separar os arquivos de UI ou estilização em uma pasta e os arquivos de código JSX e componentes criados em outra pasta, por exemplo.
+---------------------------------------------------------------------------------------------------
