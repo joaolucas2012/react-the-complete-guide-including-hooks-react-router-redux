@@ -1,0 +1,41 @@
+---------------------------------------------------------------------------------------------------
+
+ADICIONAR EVENT LISTENERS A BOTÕES:
+--> É só declarar uma função antes do return do componente com o código que deve ser executado com o clique no botão.
+--> Ao criar uma tag button, basta adicionar um atributo chamado 'onClick' que recebe um valor com o mesmo nome da função declarada.
+--> O 'onClick' recebe o nome da função entre chaves:
+  <button onClick = {nomeDaFunção}></button>
+--> A função recebida dentro de chaves não pode ter '()', ou seja, não preciso chamar a função ao passá-la como parâmetro.
+--> Quando isso acontece, é como se o valor com o nome da função apontasse para a função em si, e quando acontecer o clique, o valor chamará a função para a qual ele aponta e ela será executada como event listener.
+
+---------------------------------------------------------------------------------------------------
+
+TRABALHANDO COM "STATE":
+--> Para fazer o event listener atualizar algo na tela com um clique no botão, é preciso usar o state de um componente.
+--> Para isso, é preciso importar um pedaço da biblioteca do react chamado 'useState'. O useState é um react hook.
+--> Exemplo:
+   import React, { useState } from 'react';
+--> É OBRIGATÓRIO chamar o useState() dentro da função do componente (antes do return).
+
+
+COMO FUNCIONA:
+--> O método useState() é uma função que retorna um array de duas posições.
+--> O primeiro valor do array é o valor atual que o estado do componente está armazenando ou mostrando na interface.
+--> O segundo valor é uma função que pode ser usada para atualizar ou mudar o valor atual que o estado do componente está armazenando e está exibindo na interface.
+--> Ele deve ser usado para atualizar algo que está sendo exibido na interface. Mas ISSO VALE SOMENTE PARA O COMPONENTE EM QUE ELE ESTÁ SENDO IMPLEMENTADO.
+
+
+COMO DEVE SER FEITO:
+--> É necessário fazer um desestruturação do array e pegar o valor atual do state e a função que servirá para atualizar o state atual do componente.
+--> Padrão:
+    const [valorAtual, funçãoQueAtualizaValorAtual] = useState(valorAtual);
+--> Aqui, o valor atual do state precisa ser passado por mim como argumento da função useState(), se não, não funciona.
+
+
+MELHOR FORMA DE FAZER ISSO:
+--> É bom nomear o valor atual com um nome que descreve o que ele é.
+--> É bom nomear a função com 'set' + nome do valor atual.
+--> Exemplo:
+    const [title, setTitle] = useState(props.title);
+
+---------------------------------------------------------------------------------------------------

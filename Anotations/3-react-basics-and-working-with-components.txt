@@ -162,13 +162,3 @@ const App = () => {
 export default App;
 
 ---------------------------------------------------------------------------------------------------
-
-ADICIONAR EVENT LISTENERS A BOTÕES:
---> É só declarar uma função antes do return do componente com o código que deve ser executado com o clique no botão.
---> Ao criar uma tag button, basta adicionar um atributo chamado 'onClick' que recebe um valor com o mesmo nome da função declarada.
---> O 'onClick' recebe o nome da função entre chaves:
-  <button onClick = {nomeDaFunção}></button>
---> A função recebida dentro de chaves não pode ter '()', ou seja, não preciso chamar a função ao passá-la como parâmetro.
---> Quando isso acontece, é como se o valor com o nome da função apontasse para a função em si, e quando acontecer o clique, o valor chamará a função para a qual ele aponta e ela será executada como event listener.
-
----------------------------------------------------------------------------------------------------
