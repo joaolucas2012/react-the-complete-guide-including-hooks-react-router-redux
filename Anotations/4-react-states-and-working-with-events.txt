@@ -30,6 +30,7 @@ COMO DEVE SER FEITO:
 --> Padrão:
     const [valorAtual, funçãoQueAtualizaValorAtual] = useState(valorAtual);
 --> Aqui, o valor atual do state precisa ser passado por mim como argumento da função useState(), se não, não funciona.
+--> O valor que é passado como argumento SÓ É CONSIDERADO NA PRIMEIRA VEZ QUE O USESTATE É CHAMADO.
 
 
 MELHOR FORMA DE FAZER ISSO:
@@ -37,5 +38,11 @@ MELHOR FORMA DE FAZER ISSO:
 --> É bom nomear a função com 'set' + nome do valor atual.
 --> Exemplo:
     const [title, setTitle] = useState(props.title);
+
+---------------------------------------------------------------------------------------------------
+
+OLHANDO O USESTATE MAIS DE PERTO:
+--> Quando um useState é criado na implementação de um componente, toda vez que esse componente é chamado repetidas vezes no código de outro componente ou do próprio App(), cada instância desse componente terá seu próprio useState que atualiza seu estado individualmente e separadamente.
+--> Assim, quando um componente é atualizado pelo useState, os outros componentes similares não são atualizados junto, ou seja, cada componente, embora todos sejam iguais, se atualiza individualmente segundo seu próprio useState.
 
 ---------------------------------------------------------------------------------------------------
