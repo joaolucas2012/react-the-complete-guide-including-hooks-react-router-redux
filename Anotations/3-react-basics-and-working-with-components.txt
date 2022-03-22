@@ -81,7 +81,7 @@ COMO DEIXAR UM COMPONENTE REUTILIZÁVEL:
 --> Em cada componente eu devo declarar alguns atributos, como por exemplo:
 <Componente title={talcoisa}></Componente>
 
---> Esses atributos precisam ter os mesmos nomes dos atributos dos ojetos dentro do vetor. 
+--> Esses atributos precisam ter os mesmos nomes dos atributos dos objetos dentro do vetor. 
 --> Depois eu entro nos componentes e coloco o "props" como parâmetro de sua função. 
 --> O "props" é um método passado como parâmetro da função de um componente.
 --> Esse método contém todas as keys (cada key é um atributo de um objeto dentro do vetor) e os valores (cada valor é o valor que um atributo do vetor tem).
@@ -118,7 +118,7 @@ O CONCEITO DE COMPOSIÇÃO: CHILDREN PROPS
 --> Composição é deixar a aplicação dividida ou composta por múltiplas partes que se completam.
 --> Dá pra criar um componente que só tenha um CSS nele, tipo um componente próprio que sirva pra conter o css de um card.
 --> Pra isso e só colocar "props" como parâmetro da função do novo componente Card, depois criar uma constante chamada 'classes', e dentro dela escrever 'card ' + props.className;
---> Ao atribuir essa constante 'classes' como className da div, a div que for retornada irá pegar a classe 'card' e também a classe que estiver já sendo usada pelo conteúdo dentro do card, caso tenhas.
+--> Ao atribuir essa constante 'classes' como className da div, a div que for retornada irá pegar a classe 'card' e também a classe que estiver já sendo usada pelo conteúdo dentro do card, caso tenha.
 --> Depois, no return, é pra retornar uma div com a className = {classes}, e dentro da div é pra deixar um {props.children}.
 --> O props.children representa tudo que estiver declarado dentro da tag componente Card, aonde quer que ele tenha sido declarado.
 
@@ -143,8 +143,22 @@ CARD.CSS
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 ---------------------------------------------------------------------------------------------------
+
 ORGANIZAÇÃO DE ARQUIVOS EM PASTAS:
 --> É uma boa prática organizar os diversos arquivos do projeto em pastas, na pasta components.
 --> Isso reduz a bagunça dos arquivos e torna a estrutura do projeto mais organizada.
 --> Pode-se separar os arquivos de UI ou estilização em uma pasta e os arquivos de código JSX e componentes criados em outra pasta, por exemplo.
+
+---------------------------------------------------------------------------------------------------
+
+SINTAXE ALTERNATIVA DE FUNÇÕES:
+--> Dá para declarar os componentes com arrow functions.
+--> Exemplo:
+const App = () => {
+  return{
+     <></>;
+  }
+}
+export default App;
+
 ---------------------------------------------------------------------------------------------------
