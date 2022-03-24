@@ -94,3 +94,14 @@ USANDO SOMENTE UM STATE:
 --> Aqui, o ...userInput copia todos os outros valores do objeto e muda apenas o enteredTitle para o valor que deve ser atualizado ao ser executado o onChange.
 
 ---------------------------------------------------------------------------------------------------
+
+ATUALIZAR UM STATE QUE DEPENDE DO STATE ANTERIOR:
+--> No caso de precisar atualizar um state que precisa do objeto do state anterior, é preciso mudar o método.
+--> Exemplo:
+    setUserInput((prevState) => {
+            return { ...prevState, enteredDate: event.target.value };
+    });
+--> O prevState é o state anterior, que possui o objeto anterior, e a desestruturação do objeto é feita com o objeto anterior.
+--> Sendo que o objeto anterior é passado como parâmetro na arrow function do setUserInput.
+
+---------------------------------------------------------------------------------------------------
