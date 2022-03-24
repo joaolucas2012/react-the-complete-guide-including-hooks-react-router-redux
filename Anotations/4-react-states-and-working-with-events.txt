@@ -54,3 +54,22 @@ ADICIONANDO FORM INPUTS:
 --> Não esquecer de importar cada componente nos devidos lugares.
 
 ---------------------------------------------------------------------------------------------------
+
+REAGINDO COM O INPUT DO USUÁRIO:
+--> Para reagir a um evento no React a cada mudança de um elemento, pode-se usar o hook chamado onChange, que reage dinamicamente a cada alteração que ocorre.
+--> O onChange é passado como propriedade a uma tag do HTML e recebe uma função como valor, e essa função será executada a cada vez que acontecer alguma mudança no elemento, e o React que invoca essa função automaticamente.
+--> Com a função onChange do React, a cada vez que o React executa a função enviada como parâmetro, recebemos um objeto com todas as informações do evento, automaticamente.
+
+
+COMO FAZER:
+--> Basta criar uma função antes do return do componente, que vai ser um event handler que é chamado toda vez que o onChange é ativado.
+--> Depois é só ir na tag de input ou algo assim, de um formulário, por exemplo, e adicionar a propriedade onChange e passar o nome da função como valor a essa propriedade entre chaves:
+     <input type="text" onChange={funçãoEventHandler} />
+--> Se eu colocar o 'event' como argumento da função event handler, posso usar as informações desse evento para criar alguma condição ou lógica.
+--> Exemplo:
+     const funcaoEventHandler = (event) => {
+         console.log(event.target.value);
+     };
+--> Aqui, o target é uma propriedade do objeto event e o value é um valor disponível no target. A cada letra digitada no campo de input, o value recebe o texto que o input recebeu.
+
+---------------------------------------------------------------------------------------------------
