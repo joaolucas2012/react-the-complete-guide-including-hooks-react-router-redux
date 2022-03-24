@@ -46,3 +46,11 @@ OLHANDO O USESTATE MAIS DE PERTO:
 --> Assim, quando um componente é atualizado pelo useState, os outros componentes similares não são atualizados junto, ou seja, cada componente, embora todos sejam iguais, se atualiza individualmente segundo seu próprio useState.
 
 ---------------------------------------------------------------------------------------------------
+
+ADICIONANDO FORM INPUTS:
+--> Dá para criar um componente separado para o código do formulário, com dois arquivos, um .js e um .css.
+--> Depois é só criar outro componente e retornar a tag do formulário.
+--> Por fim, basta ir no App e adicionar a tag do componente que renderiza um formulário.
+--> Não esquecer de importar cada componente nos devidos lugares.
+
+---------------------------------------------------------------------------------------------------
