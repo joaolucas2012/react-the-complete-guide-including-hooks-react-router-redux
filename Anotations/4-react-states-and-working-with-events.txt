@@ -73,3 +73,24 @@ COMO FAZER:
 --> Aqui, o target é uma propriedade do objeto event e o value é um valor disponível no target. A cada letra digitada no campo de input, o value recebe o texto que o input recebeu.
 
 ---------------------------------------------------------------------------------------------------
+
+USANDO SOMENTE UM STATE:
+--> Ao invés de usar vários states para um formulário, basta apenas usar um, e passar um objeto como parâmetro ao useState.
+--> Esse objeto tem que ter suas propriedades setadas com os valores iniciais de cada input.
+--> Cada alteração que for feita atualizará uma das propriedades do objeto através da desestruturação de vetor (rest).
+--> Exemplo:
+    const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: '',
+    });
+
+    const titleChangeHandler = event => {
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.value,
+        });
+    };
+--> Aqui, o ...userInput copia todos os outros valores do objeto e muda apenas o enteredTitle para o valor que deve ser atualizado ao ser executado o onChange.
+
+---------------------------------------------------------------------------------------------------
