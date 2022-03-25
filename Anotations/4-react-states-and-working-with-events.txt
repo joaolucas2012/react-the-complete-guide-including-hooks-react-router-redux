@@ -113,3 +113,21 @@ LIDANDO COM SUBMISSÃO DO FORMULÁRIO:
 --> Depois criar a função funcaoHandler que será executada quando o submit for realizado.
 
 ---------------------------------------------------------------------------------------------------
+
+COMO LIMPAR OS CAMPOS DE UM FORMULÁRIO COM A FUNÇÃO SUBMIT HANDLER:
+--> Basta apenas adicionar a propriedade 'value' a cada um dos campos de input do formulário.
+--> Depois passar ao 'value' o nome do state daquele input.
+--> Por exemplo:
+    <input
+            type="date"
+            min="2020-01-01"
+            max="2022-12-31"
+            value={enteredDate}
+            onChange={dateChangeHandler}
+     />
+--> Aqui, o value={enteredDate} serve para fazer o campo de input sempre receber o mesmo valor que estiver digitado no campo de input.
+--> Depois, basta implementar um 'setInputDate('');' na função submitHandler.
+--> Dessa forma, assim que o usuário der um submit, a função submitHandler chamará o setInputDate(''); e isso deixará o valor do state do campo de input com uma tag vazia.
+--> Como o value do input é igual ao valor do state atual do input, logo, como o state foi mudado pra uma tag vazia quando o submit acontece, isso servirá para limpar o campo do input desse form toda vez que o usuário der um submit.
+
+---------------------------------------------------------------------------------------------------
