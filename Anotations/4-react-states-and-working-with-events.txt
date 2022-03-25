@@ -105,3 +105,11 @@ ATUALIZAR UM STATE QUE DEPENDE DO STATE ANTERIOR:
 --> Sendo que o objeto anterior é passado como parâmetro na arrow function do setUserInput.
 
 ---------------------------------------------------------------------------------------------------
+
+LIDANDO COM SUBMISSÃO DO FORMULÁRIO:
+--> Basta adicionar na tag <form> um método chamado 'onSubmit'.
+--> Exemplo:
+     <form onSubmit={funcaoHandler}><form />
+--> Depois criar a função funcaoHandler que será executada quando o submit for realizado.
+
+---------------------------------------------------------------------------------------------------
