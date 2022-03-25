@@ -131,3 +131,22 @@ COMO LIMPAR OS CAMPOS DE UM FORMULÁRIO COM A FUNÇÃO SUBMIT HANDLER:
 --> Como o value do input é igual ao valor do state atual do input, logo, como o state foi mudado pra uma tag vazia quando o submit acontece, isso servirá para limpar o campo do input desse form toda vez que o usuário der um submit.
 
 ---------------------------------------------------------------------------------------------------
+
+COMO PASSAR UM VALOR DE UM COMPONENTE FILHO PARA O PAI:
+--> Basta usar uma função, que passa um parâmetro de um filho para o pai.
+--> Nesse caso, esse parâmetro pode ser um objeto com todos os dados necessários para ser mostrado em um card ou para ser salvo como uma nova entrada de dados, por exemplo.
+--> Daí, basta ir no componente pai, ir na Tag personalizado do componente filho, adicionar uma propriedade com qualquer nome, e passar ={funçãoHandler} como valor a essa propriedade.
+--> Depois, basta criar uma funçãoHandler antes do return e implementar a criação de um objeto novo que receberá uma desestruturação do objeto que foi recebido como parâmetro pelo filho.
+--> Essa desestruturação pegará todos os valores do objeto recebido do componente filho e adicionará um id para ele.
+--> Assim, o pai recebe um novo objeto do filho e identifica esse objeto, como se fosse um novo objeto agora cadastrado e recebido com sucesso.
+
+--> Na função do componente filho, é preciso receber o props como argumento.
+--> Exemplo:
+    const NomeDoComponente = (props) => {};
+--> Esse props passará a funçãoHandler do componente pai para este componente filho.
+--> Depois, basta ir na função do submitHandler e colocar 'props.funçãoHandler(objetoComoParâmetro);'.
+--> A funçãoHandler é a função implementada no componente pai e que foi recebida via props pelo componente filho, e agora o componente filho chamou essa função e passou como parâmetro, por exemplo, um objeto com os dados que o componente pai vai receber e fazer sua desestruturação para adicionar um id à ele.
+
+--> Isso tudo dá pra ser passado de um componente para o App() da mesma forma e método acima.
+
+---------------------------------------------------------------------------------------------------
