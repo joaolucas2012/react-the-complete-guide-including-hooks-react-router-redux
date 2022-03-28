@@ -150,3 +150,9 @@ COMO PASSAR UM VALOR DE UM COMPONENTE FILHO PARA O PAI:
 --> Isso tudo dá pra ser passado de um componente para o App() da mesma forma e método acima.
 
 ---------------------------------------------------------------------------------------------------
+
+LEVANTANDO O STATE:
+--> Quando é preciso passar um state de um componente filho para outro componente filho (ou seja, um 'irmão').
+--> Para isso, basta passar o state para o App ou para o componente pai via props, e daí, passar ele do pai para o outro componente filho via props também.
+
+---------------------------------------------------------------------------------------------------
