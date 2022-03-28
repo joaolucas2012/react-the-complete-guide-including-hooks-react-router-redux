@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------------------------------
+
+RENDERIZANDO LISTAS DE DADOS:
+--> Dá para fazer isso usando o método map();
+
+O QUE O MAP() FAZ:
+--> Ele cria um novo array baseado em outro array e pode fazer operações com os valores do array dado como parâmetro.
+--> Retorna o array com os valores convertidos para outra coisa que eu quiser.
+--> Exemplo:
+     { numbers.map( (number) => <li> { number } </li> ) }
+--> Aqui, a função mapeou cada um dos valores dentro do array numbers como um 'number' e transformou cada um desses valores em uma lista de itens.
+--> No React, é preciso realizar essa operação com o código entre chaves.
+
+
+RENDERIZAR UMA LISTA DE ITENS:
+     {props.expenses.map((expense) => (
+          <ExpenseItem
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
+
+--> O ExpenseItem é um componente que modela cada objeto do array em um card, por exemplo, através do map().
+
+---------------------------------------------------------------------------------------------------
