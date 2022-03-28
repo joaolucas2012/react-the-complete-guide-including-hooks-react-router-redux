@@ -26,7 +26,7 @@ COMO FUNCIONA:
 
 
 COMO DEVE SER FEITO:
---> É necessário fazer um desestruturação do array e pegar o valor atual do state e a função que servirá para atualizar o state atual do componente.
+--> É necessário fazer uma desestruturação do array e pegar o valor atual do state e a função que servirá para atualizar o state atual do componente.
 --> Padrão:
     const [valorAtual, funçãoQueAtualizaValorAtual] = useState(valorAtual);
 --> Aqui, o valor atual do state precisa ser passado por mim como argumento da função useState(), se não, não funciona.
@@ -135,7 +135,7 @@ COMO LIMPAR OS CAMPOS DE UM FORMULÁRIO COM A FUNÇÃO SUBMIT HANDLER:
 COMO PASSAR UM VALOR DE UM COMPONENTE FILHO PARA O PAI:
 --> Basta usar uma função, que passa um parâmetro de um filho para o pai.
 --> Nesse caso, esse parâmetro pode ser um objeto com todos os dados necessários para ser mostrado em um card ou para ser salvo como uma nova entrada de dados, por exemplo.
---> Daí, basta ir no componente pai, ir na Tag personalizado do componente filho, adicionar uma propriedade com qualquer nome, e passar ={funçãoHandler} como valor a essa propriedade.
+--> Daí, basta ir no componente pai, ir na Tag personalizada do componente filho, adicionar uma propriedade com qualquer nome, e passar ={funçãoHandler} como valor a essa propriedade.
 --> Depois, basta criar uma funçãoHandler antes do return e implementar a criação de um objeto novo que receberá uma desestruturação do objeto que foi recebido como parâmetro pelo filho.
 --> Essa desestruturação pegará todos os valores do objeto recebido do componente filho e adicionará um id para ele.
 --> Assim, o pai recebe um novo objeto do filho e identifica esse objeto, como se fosse um novo objeto agora cadastrado e recebido com sucesso.
@@ -154,5 +154,14 @@ COMO PASSAR UM VALOR DE UM COMPONENTE FILHO PARA O PAI:
 LEVANTANDO O STATE:
 --> Quando é preciso passar um state de um componente filho para outro componente filho (ou seja, um 'irmão').
 --> Para isso, basta passar o state para o App ou para o componente pai via props, e daí, passar ele do pai para o outro componente filho via props também.
+
+---------------------------------------------------------------------------------------------------
+
+COMPONENTES CONTROLADOS E INCONTROLADOS | STATELESS VS STATEFULL
+--> Um componente controlado é um componente em que seu valor está sob o controle do componente pai.
+--> É quando o componente filho passa um valor ao componente pai e a lógica está com o componente pai.
+
+--> Statefull é quando em todo o App em react que estou contruindo, vou precisar de vários componentes que administram algum state.
+--> Stateless é quando o componente não é responsável por nenhum state, também chamado de dumb component e presentational component.
 
 ---------------------------------------------------------------------------------------------------
