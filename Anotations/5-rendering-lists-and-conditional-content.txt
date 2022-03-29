@@ -15,6 +15,7 @@ O QUE O MAP() FAZ:
 RENDERIZAR UMA LISTA DE ITENS:
      {props.expenses.map((expense) => (
           <ExpenseItem
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
@@ -22,5 +23,35 @@ RENDERIZAR UMA LISTA DE ITENS:
         ))}
 
 --> O ExpenseItem é um componente que modela cada objeto do array em um card, por exemplo, através do map().
+--> É OBRIGATÓRIO CADA ELEMENTO DA LISTA TER UM ATRIBUTO CHAMADO 'KEY', pois isso serve para identificar cada elemento e melhorar a performance do código a cada novo item que é adicionado na lista.
+
+---------------------------------------------------------------------------------------------------
+
+USANDO STATEFUL LISTS:
+--> Basta criar um state no componente e colocar um array fictício como valor inicial desse state.
+--> Depois na funçãoHandler que serve pra adicionar novos elementos na lista, basta usar a função que atualiza o state para receber outra função como parâmetro.
+--> A função como parâmetro do state deve retornar o array anterior aumentado do novo valor que se deseja acrescentar a esse array de valores.
+--> Para isso é só usar o 'prev' + nomeDoState numa desestruturação de array.
+--> Exemplo:
+     const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+     const addExpenseHandler = (expense) => {
+       setExpenses(prevExpenses => {
+         return [expense, ...prevExpenses];
+       });
+     };
+
+---------------------------------------------------------------------------------------------------
+
+PARA FILTRAR UM ARRAY DE ELEMENTOS:
+--> Basta usar o método filter().
+--> O filter filtra cada elemento do array sob alguma condição, e recebe como parâmetro uma função com a condição desejada.
+--> Exemplo:
+    const fiteredYear = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() ===         selectedYear;
+    });
+--> Aqui, o método filter() seleciona o item atual do array se a condição da função recebida como parâmetro for true. Se for false, o filter() avança para o próximo item do array.
+--> O getFullYear() pega o ano completo de um objeto date.
+--> O filter() retorna um novo array com os elementos filtrados, mas sem se perder ou modificar o array original com todos os valores.
 
 ---------------------------------------------------------------------------------------------------
