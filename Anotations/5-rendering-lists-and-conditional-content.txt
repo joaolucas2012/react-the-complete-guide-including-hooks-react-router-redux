@@ -55,3 +55,11 @@ PARA FILTRAR UM ARRAY DE ELEMENTOS:
 --> O filter() retorna um novo array com os elementos filtrados, mas sem se perder ou modificar o array original com todos os valores.
 
 ---------------------------------------------------------------------------------------------------
+
+PARA RENDERIZAR CONTEÚDOS CONDICIONAIS:
+--> Basta colocar entre {} um operador condicional ternário com a condição para renderizar os componentes desejados.
+--> Ou então dá pra criar uma lógica no corpo da função do componente (antes do return) e colocar valores em jsx ou html armazenados em variáveis.
+--> Depois, dá pra usar condições if pra fazer uma lógica e mudar o valor da variável.
+--> Por fim, dá pra simplesmente colocar o nome da variável entre {} no return do componente, e isso faz o componente renderizar o valor dessa variável, seja ele qual for, dependendo da lógica em que essa variável é submetida.
+
+---------------------------------------------------------------------------------------------------
