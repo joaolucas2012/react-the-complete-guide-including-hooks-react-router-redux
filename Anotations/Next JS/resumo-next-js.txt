@@ -1,0 +1,36 @@
+
+------------------------------------------------------------------
+
+O QUE É NEXT JS:
+--> Ele é bom para tratar de indexação em sites.
+--> O server client faz uma requisição para o servidor Next.js (Node).
+--> O Next.js busca os dados no back-end e depois cria uma interface usando esses dados.
+--> o Next.js retorna essa interface para o server client.
+
+------------------------------------------------------------------
+
+COMO CRIAR UM PROJETO EM NEXT JS:
+--> Basta entrar na pasta onde quero criar o projeto e digitar:
+npx create-next-app .
+
+------------------------------------------------------------------
+
+ORGANIZAÇÃO DO PROJETO:
+
+--> Dentro da pasta public:
+- Remover favicon.ico e vercel.svg
+
+--> Deletar o README.md.
+--> Deletar a pasta styles.
+
+--> Dentro da pasta pages:
+- Remover a pasta api.
+
+--> Dentro do arquivo index.js:
+- Remover os dois imports no topo do arquivo.
+- Remover tudo que tem dentro do return().
+
+--> Dentro do arquivo _app.js:
+- Remover o import '../styles/globals.css'.
+
+------------------------------------------------------------------

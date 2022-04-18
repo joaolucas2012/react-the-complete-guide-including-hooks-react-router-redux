@@ -1,0 +1,34 @@
+--------------------------------------------------------------------
+
+O PROPÓSITO DO TYPESCRIPT:
+--> Ajuda na manutenção do código, facilita o entendimento.
+--> Ele dá um tipo pra cada objeto javascript no código, especifica o que cada objeto deve ter como informações, o que ele armazena, do que diz respeito.
+
+--> Exemplo:
+type User = {
+   name: string;
+   address: {
+      city: string;
+      state: string;
+   }
+}
+
+--> Aqui, o user é um objeto que precisa ter sempre armazenado um nome e um endereço, que é composto por cidade e estado.
+
+--> Exemplo de uso dos dados:
+const createWelcomeMessage = (user: User) {
+   return `Boas-vindas, ${user.name}, Cidade: ${user.address.city} - ${user.address.state}!`
+}
+
+--------------------------------------------------------------------
+
+ATALHO DE TECLADO PARA SABER O QUE TEM DE OPÇÕES DENTRO DE UM OBJETO NO VSCODE:
+Ctrl + espaço
+
+--------------------------------------------------------------------
+
+PORQUE USAR TYPESCRIPT:
+--> Evita erros de tipagem que o Javascript pode deixar passar batido.
+--> Quando por exemplo uma função exige que seja passado um determinado objeto como argumento, o Typescript pode forçar o argumento a ser de tal valor, como uma string ou um number, e se a pessoa passar o parâmetro errado, o Typescript apresenta um erro.
+
+--------------------------------------------------------------------
