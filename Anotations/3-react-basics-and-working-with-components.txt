@@ -23,6 +23,19 @@ ANALISANDO UM PROJETO EM REACT PADRÃO:
 
 ---------------------------------------------------------------------------------------------------
 
+QUE ARQUIVOS EU DEVO EXCLUIR DE UMA ESTRUTURA CREATE-REACT-APP:
+
+--> Na pasta src:
+- App.css
+- App.test.js
+- logo.svg
+- reportWebVitals.js
+- setupTests.js
+
+--> Na pasta public: Deletar tudo menos o index.html.
+
+---------------------------------------------------------------------------------------------------
+
 INTRODUÇÃO AO JSX:
 --> Um arquivo .jsx é um html sendo retornado de um código Javascript.
 --> Tudo funciona porque o código é transformado por trás das cenas em outro código suportado pelo browser.
