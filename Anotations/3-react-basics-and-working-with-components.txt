@@ -34,6 +34,19 @@ QUE ARQUIVOS EU DEVO EXCLUIR DE UMA ESTRUTURA CREATE-REACT-APP:
 
 --> Na pasta public: Deletar tudo menos o index.html.
 
+--> No arquivo html: 
+- Remover tudo entre a tag meta e a tag title.
+- Remover comentários entre a div id="root" e a tag body.
+
+--> No arquivo index.js:
+- Remover o import reportWebVitals.
+- Remover os comentários e o 'reportWebVitals();' do fim do arquivo.
+- Remover o import index.css.
+
+--> No arquivo App.js:
+- Remover o import logo svg e o import App.css.
+- Remover tudo que estiver dentro do return do App.
+
 ---------------------------------------------------------------------------------------------------
 
 INTRODUÇÃO AO JSX:
